@@ -83,6 +83,12 @@
   .rank-bar-fill { background: var(--green-light); height: 100%; }
   .rank-points { text-align: center; min-width: 54px; flex-shrink: 0; font-weight: bold; font-size: 17px; }
   .rank-points span { display: block; font-size: 9px; font-weight: bold; color: var(--text-muted); }
+  .streak-chip {
+    display: inline-block; font-size: 11px; font-weight: bold; padding: 1px 7px;
+    border-radius: 10px; vertical-align: middle;
+  }
+  .streak-fire { background: rgba(255,122,26,.18); color: #ff9d4d; }
+  .streak-goal { background: rgba(37,152,74,.18); color: #4ade80; }
   @media (max-width: 480px) {
     .rank-bar { display: none; }
     .rank-sub { margin-bottom: 0; }
@@ -94,7 +100,7 @@
 <header>
   <img class="crest" src="img/escudo.png" alt="Escudo Peña QueSeFolme">
   <h1>Peña QueSeFolme</h1>
-  <p>Resultados y Estadísticas · Actualizado el 05/09/2026 20:18</p>
+  <p>Resultados y Estadísticas · Actualizado el 05/09/2026 20:25</p>
 </header>
 <nav>
   <a href="#clasificacion">🏆 Clasificación</a>
@@ -109,7 +115,7 @@
       <div class="rank-badge">1</div>
       <img class="avatar" src="img/avatars/antoniot.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">AntonioT</div>
+        <div class="rank-name">AntonioT </div>
         <div class="rank-sub">PJ 1 · PPM 3.00 · Goles 2 · GPM 2.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:100%"></div></div>
       </div>
@@ -120,7 +126,7 @@
       <div class="rank-badge">2</div>
       <img class="avatar" src="img/avatars/andres.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Andres</div>
+        <div class="rank-name">Andres </div>
         <div class="rank-sub">PJ 1 · PPM 3.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:100%"></div></div>
       </div>
@@ -131,7 +137,7 @@
       <div class="rank-badge">3</div>
       <img class="avatar" src="img/avatars/david.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">David</div>
+        <div class="rank-name">David </div>
         <div class="rank-sub">PJ 1 · PPM 3.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:100%"></div></div>
       </div>
@@ -142,7 +148,7 @@
       <div class="rank-badge">4</div>
       <img class="avatar" src="img/avatars/franr.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">FranR</div>
+        <div class="rank-name">FranR </div>
         <div class="rank-sub">PJ 1 · PPM 3.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:100%"></div></div>
       </div>
@@ -153,7 +159,7 @@
       <div class="rank-badge">5</div>
       <img class="avatar" src="img/avatars/pablo.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Pablo</div>
+        <div class="rank-name">Pablo </div>
         <div class="rank-sub">PJ 1 · PPM 3.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:100%"></div></div>
       </div>
@@ -164,7 +170,7 @@
       <div class="rank-badge">6</div>
       <img class="avatar" src="img/avatars/ruben.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Ruben</div>
+        <div class="rank-name">Ruben </div>
         <div class="rank-sub">PJ 1 · PPM 3.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:100%"></div></div>
       </div>
@@ -175,7 +181,7 @@
       <div class="rank-badge">7</div>
       <img class="avatar" src="img/avatars/victor.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Victor</div>
+        <div class="rank-name">Victor </div>
         <div class="rank-sub">PJ 1 · PPM 3.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:100%"></div></div>
       </div>
@@ -186,7 +192,7 @@
       <div class="rank-badge">8</div>
       <img class="avatar" src="img/avatars/alfonso.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Alfonso</div>
+        <div class="rank-name">Alfonso </div>
         <div class="rank-sub">PJ 1 · PPM 0.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
@@ -197,7 +203,7 @@
       <div class="rank-badge">9</div>
       <img class="avatar" src="img/avatars/bichu.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Bichu</div>
+        <div class="rank-name">Bichu </div>
         <div class="rank-sub">PJ 1 · PPM 0.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
@@ -208,7 +214,7 @@
       <div class="rank-badge">10</div>
       <img class="avatar" src="img/avatars/dani.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Dani</div>
+        <div class="rank-name">Dani </div>
         <div class="rank-sub">PJ 1 · PPM 0.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
@@ -219,7 +225,7 @@
       <div class="rank-badge">11</div>
       <img class="avatar" src="img/avatars/gago.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Gago</div>
+        <div class="rank-name">Gago </div>
         <div class="rank-sub">PJ 1 · PPM 0.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
@@ -230,7 +236,7 @@
       <div class="rank-badge">12</div>
       <img class="avatar" src="img/avatars/joses.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">JoseS</div>
+        <div class="rank-name">JoseS </div>
         <div class="rank-sub">PJ 1 · PPM 0.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
@@ -241,7 +247,7 @@
       <div class="rank-badge">13</div>
       <img class="avatar" src="img/avatars/juanjo.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Juanjo</div>
+        <div class="rank-name">Juanjo </div>
         <div class="rank-sub">PJ 1 · PPM 0.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
@@ -252,7 +258,7 @@
       <div class="rank-badge">14</div>
       <img class="avatar" src="img/avatars/pibbe.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Pibbe</div>
+        <div class="rank-name">Pibbe </div>
         <div class="rank-sub">PJ 1 · PPM 0.00 · Goles 0 · GPM 0.00</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
@@ -266,7 +272,7 @@
       <div class="rank-badge">1</div>
       <img class="avatar" src="img/avatars/antoniot.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">AntonioT</div>
+        <div class="rank-name">AntonioT </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:100%"></div></div>
       </div>
       <div class="rank-points">2<span>GOLES</span></div>
@@ -276,7 +282,7 @@
       <div class="rank-badge">2</div>
       <img class="avatar" src="img/avatars/alfonso.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Alfonso</div>
+        <div class="rank-name">Alfonso </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -286,7 +292,7 @@
       <div class="rank-badge">3</div>
       <img class="avatar" src="img/avatars/andres.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Andres</div>
+        <div class="rank-name">Andres </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -296,7 +302,7 @@
       <div class="rank-badge">4</div>
       <img class="avatar" src="img/avatars/bichu.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Bichu</div>
+        <div class="rank-name">Bichu </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -306,7 +312,7 @@
       <div class="rank-badge">5</div>
       <img class="avatar" src="img/avatars/dani.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Dani</div>
+        <div class="rank-name">Dani </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -316,7 +322,7 @@
       <div class="rank-badge">6</div>
       <img class="avatar" src="img/avatars/david.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">David</div>
+        <div class="rank-name">David </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -326,7 +332,7 @@
       <div class="rank-badge">7</div>
       <img class="avatar" src="img/avatars/franr.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">FranR</div>
+        <div class="rank-name">FranR </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -336,7 +342,7 @@
       <div class="rank-badge">8</div>
       <img class="avatar" src="img/avatars/gago.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Gago</div>
+        <div class="rank-name">Gago </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -346,7 +352,7 @@
       <div class="rank-badge">9</div>
       <img class="avatar" src="img/avatars/joses.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">JoseS</div>
+        <div class="rank-name">JoseS </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -356,7 +362,7 @@
       <div class="rank-badge">10</div>
       <img class="avatar" src="img/avatars/juanjo.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Juanjo</div>
+        <div class="rank-name">Juanjo </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -366,7 +372,7 @@
       <div class="rank-badge">11</div>
       <img class="avatar" src="img/avatars/pablo.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Pablo</div>
+        <div class="rank-name">Pablo </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -376,7 +382,7 @@
       <div class="rank-badge">12</div>
       <img class="avatar" src="img/avatars/pibbe.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Pibbe</div>
+        <div class="rank-name">Pibbe </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -386,7 +392,7 @@
       <div class="rank-badge">13</div>
       <img class="avatar" src="img/avatars/ruben.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Ruben</div>
+        <div class="rank-name">Ruben </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
@@ -396,7 +402,7 @@
       <div class="rank-badge">14</div>
       <img class="avatar" src="img/avatars/victor.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Victor</div>
+        <div class="rank-name">Victor </div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
       </div>
       <div class="rank-points">0<span>GOLES</span></div>
