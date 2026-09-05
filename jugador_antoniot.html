@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AntonioT — Peña QueSeFolme</title>
+<link rel="icon" href="img/escudo.png">
+<style>
+
+  :root {
+    --bg-dark: #0b1220;
+    --bg-card: #141d2f;
+    --bg-card-alt: #101929;
+    --green: #1e7a3c;
+    --green-light: #25984a;
+    --green-hover: #2aa855;
+    --naranja: #ff7a1a;
+    --amarillo: #ffd400;
+    --text-light: #f5f5f5;
+    --text-muted: #9aa5b1;
+    --gold: #ffd23f;
+    --silver: #c9d3dc;
+    --bronze: #e08a3c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg-dark); color: var(--text-light);
+    font-family: "Segoe UI", Arial, sans-serif; padding-bottom: 60px;
+  }
+  header { text-align: center; padding: 36px 16px 20px; }
+  header .crest { height: 76px; width: auto; display: inline-block; margin-bottom: 10px; }
+  header h1 { margin: 0 0 6px; font-size: 28px; }
+  header p { margin: 0; color: var(--text-muted); font-size: 14px; }
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+    background: var(--bg-card); padding: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.4);
+  }
+  nav a {
+    color: var(--text-light); text-decoration: none; font-weight: bold;
+    padding: 10px 18px; border-radius: 10px; background: var(--bg-card-alt);
+  }
+  nav a:hover { background: var(--green); }
+  main { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+  section { padding: 40px 0; border-top: 1px solid var(--bg-card-alt); }
+  section:first-of-type { border-top: none; }
+  section h2 { font-size: 22px; margin-bottom: 18px; }
+  section > img { max-width: 100%; border-radius: 14px; display: block; margin: 0 auto; }
+  .match-card { background: var(--bg-card); border-radius: 16px; padding: 18px; margin-bottom: 22px; }
+  .match-card img { max-width: 100%; border-radius: 10px; display: block; margin: 0 auto; }
+  .match-card h3 { margin: 0 0 12px; color: var(--text-muted); font-size: 15px; font-weight: normal; }
+  .match-card-text .score-row {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    font-size: 22px; font-weight: bold; margin-bottom: 14px;
+  }
+  .team.naranja { color: var(--naranja); }
+  .team.amarillo { color: var(--amarillo); }
+  .scorers-row { display: flex; justify-content: space-between; gap: 20px; }
+  .scorers-row > div { flex: 1; }
+  .scorers { list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 1.7; }
+  .muted { color: var(--text-muted); }
+  footer { text-align: center; color: var(--text-muted); font-size: 12px; padding-top: 24px; }
+
+  .rank-row {
+    display: flex; align-items: center; gap: 14px; background: var(--bg-card);
+    border-radius: 14px; padding: 10px 16px; margin-bottom: 10px;
+    text-decoration: none; color: var(--text-light);
+  }
+  .rank-row:nth-child(even) { background: var(--bg-card-alt); }
+  .rank-row:hover { outline: 1px solid var(--green); }
+  .rank-badge {
+    width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-weight: bold; flex-shrink: 0; border: 2px solid var(--text-muted);
+  }
+  .rank-1 .rank-badge { background: var(--gold); border-color: var(--gold); color: #0b1220; }
+  .rank-2 .rank-badge { background: var(--silver); border-color: var(--silver); color: #0b1220; }
+  .rank-3 .rank-badge { background: var(--bronze); border-color: var(--bronze); color: #0b1220; }
+  .avatar { width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0; object-fit: cover; }
+  .rank-info { flex: 1 1 auto; min-width: 0; }
+  .rank-name { font-weight: bold; }
+  .rank-sub { color: var(--text-muted); font-size: 12px; margin: 2px 0 6px; }
+  .rank-bar { background: rgba(0,0,0,.3); border-radius: 6px; height: 6px; overflow: hidden; max-width: 220px; }
+  .rank-bar-fill { background: var(--green-light); height: 100%; }
+  .rank-points { text-align: center; min-width: 54px; flex-shrink: 0; font-weight: bold; font-size: 17px; }
+  .rank-points span { display: block; font-size: 9px; font-weight: bold; color: var(--text-muted); }
+  @media (max-width: 480px) {
+    .rank-bar { display: none; }
+    .rank-sub { margin-bottom: 0; }
+  }
+
+  .profile-header { text-align: center; padding: 20px 16px 10px; }
+  .profile-header img.avatar-big {
+    width: 120px; height: 120px; border-radius: 50%; margin-bottom: 12px; object-fit: cover;
+  }
+  .profile-header h1 { margin: 0; font-size: 26px; }
+  .back-link {
+    display: inline-block; margin: 18px 0 0 16px; color: var(--text-muted); text-decoration: none;
+  }
+  .back-link:hover { color: var(--text-light); }
+  .summary-grid {
+    display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin: 10px 0 6px;
+  }
+  .summary-item { text-align: center; }
+  .summary-item .num { font-size: 24px; font-weight: bold; display: block; }
+  .summary-item .label { font-size: 11px; color: var(--text-muted); }
+  .history-row {
+    display: flex; align-items: center; gap: 14px; background: var(--bg-card);
+    border-radius: 12px; padding: 12px 16px; margin-bottom: 8px;
+    text-decoration: none; color: var(--text-light);
+  }
+  .history-row:nth-child(even) { background: var(--bg-card-alt); }
+  .history-row:hover { outline: 1px solid var(--green); }
+  .history-date { color: var(--text-muted); font-size: 13px; width: 84px; flex-shrink: 0; }
+  .history-team { font-weight: bold; width: 74px; flex-shrink: 0; }
+  .history-score { font-weight: bold; width: 64px; flex-shrink: 0; }
+  .history-goals { color: var(--text-muted); font-size: 13px; flex: 1 1 auto; }
+  .history-result {
+    width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-weight: bold; font-size: 12px; color: #0b1220; flex-shrink: 0;
+  }
+  @media (max-width: 480px) {
+    .history-goals { display: none; }
+  }
+</style>
+</head>
+<body>
+<a class="back-link" href="index.html">← Volver a la web de la peña</a>
+<header class="profile-header">
+  <img class="avatar-big" src="img/avatars/antoniot.png" alt="AntonioT">
+  <h1>AntonioT</h1>
+</header>
+<div class="summary-grid">
+  <div class="summary-item"><span class="num">1</span><span class="label">PARTIDOS</span></div>
+  <div class="summary-item"><span class="num">3</span><span class="label">PUNTOS</span></div>
+  <div class="summary-item"><span class="num">3.00</span><span class="label">PPM</span></div>
+  <div class="summary-item"><span class="num">2</span><span class="label">GOLES</span></div>
+  <div class="summary-item"><span class="num">2.00</span><span class="label">GPM</span></div>
+</div>
+<main>
+  <section style="border-top: none;">
+    <h2>📅 Historial de partidos</h2>
+    
+    <a class="history-row" href="index.html#match-20260902">
+      <span class="history-date">02/09/2026</span>
+      <span class="history-team" style="color:#ff7a1a">Naranja</span>
+      <span class="history-score">2 — 0</span>
+      <span class="history-goals">2 goles</span>
+      <span class="history-result" style="background:#25984a">V</span>
+    </a>
+  </section>
+</main>
+<footer>Generado automáticamente por Team Manager</footer>
+</body>
+</html>
