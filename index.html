@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Peña — Resultados y Estadísticas</title>
+<link rel="icon" href="favicon.png">
+<style>
+  :root {
+    --bg-dark: #0b1220;
+    --bg-card: #141d2f;
+    --bg-card-alt: #101929;
+    --green: #1e7a3c;
+    --green-hover: #2aa855;
+    --naranja: #ff7a1a;
+    --amarillo: #ffd400;
+    --text-light: #f5f5f5;
+    --text-muted: #9aa5b1;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg-dark); color: var(--text-light);
+    font-family: "Segoe UI", Arial, sans-serif; padding-bottom: 60px;
+  }
+  header { text-align: center; padding: 36px 16px 20px; }
+  header h1 { margin: 0 0 6px; font-size: 28px; }
+  header p { margin: 0; color: var(--text-muted); font-size: 14px; }
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+    background: var(--bg-card); padding: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.4);
+  }
+  nav a {
+    color: var(--text-light); text-decoration: none; font-weight: bold;
+    padding: 10px 18px; border-radius: 10px; background: var(--bg-card-alt);
+  }
+  nav a:hover { background: var(--green); }
+  main { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+  section { padding: 40px 0; border-top: 1px solid var(--bg-card-alt); }
+  section:first-of-type { border-top: none; }
+  section h2 { font-size: 22px; margin-bottom: 18px; }
+  section > img { max-width: 100%; border-radius: 14px; display: block; margin: 0 auto; }
+  .match-card { background: var(--bg-card); border-radius: 16px; padding: 18px; margin-bottom: 22px; }
+  .match-card img { max-width: 100%; border-radius: 10px; display: block; margin: 0 auto; }
+  .match-card h3 { margin: 0 0 12px; color: var(--text-muted); font-size: 15px; font-weight: normal; }
+  .match-card-text .score-row {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    font-size: 22px; font-weight: bold; margin-bottom: 14px;
+  }
+  .team.naranja { color: var(--naranja); }
+  .team.amarillo { color: var(--amarillo); }
+  .scorers-row { display: flex; justify-content: space-between; gap: 20px; }
+  .scorers-row > div { flex: 1; }
+  .scorers { list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 1.7; }
+  .muted { color: var(--text-muted); }
+  footer { text-align: center; color: var(--text-muted); font-size: 12px; padding-top: 24px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>⚽ La Peña — Resultados y Estadísticas</h1>
+  <p>Actualizado el 05/09/2026 19:18</p>
+</header>
+<nav>
+  <a href="#clasificacion">🏆 Clasificación</a>
+  <a href="#goleadores">⚽ Goleadores</a>
+  <a href="#partidos">📅 Partidos</a>
+</nav>
+<main>
+  <section id="clasificacion">
+    <h2>🏆 Clasificación general</h2>
+    <img src="img/stats_summary.png" alt="Clasificación general">
+  </section>
+  <section id="goleadores">
+    <h2>⚽ Máximos goleadores</h2>
+    <img src="img/goals_classification.png" alt="Máximos goleadores">
+  </section>
+  <section id="partidos">
+    <h2>📅 Partidos</h2>
+    
+    <div class="match-card">
+      <h3>02/09/2026</h3>
+      <img src="img/partido_20260902.png" alt="Resultado del 02/09/2026" loading="lazy">
+    </div>
+
+    <div class="match-card match-card-text">
+      <h3>01/07/2026</h3>
+      <div class="score-row">
+        <span class="team naranja">Naranja</span>
+        <span class="score">3 — 2</span>
+        <span class="team amarillo">Amarillo</span>
+      </div>
+      <div class="scorers-row">
+        <div><ul class="scorers"><li style="color:#ff7a1a">Alejandro ×3</li></ul></div>
+        <div><ul class="scorers"><li style="color:#ffd400">Juanjo ×2</li></ul></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Generado automáticamente por Team Manager</footer>
+</body>
+</html>
