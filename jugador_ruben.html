@@ -89,10 +89,11 @@
   }
 
   .profile-header { text-align: center; padding: 20px 16px 10px; }
-  .profile-header img.avatar-big {
-    width: 120px; height: 120px; border-radius: 50%; margin-bottom: 12px; object-fit: cover;
+  .profile-header .player-card {
+    max-width: 260px; width: 100%; height: auto; margin: 0 auto 6px; display: block;
+    filter: drop-shadow(0 10px 24px rgba(0,0,0,.55));
   }
-  .profile-header h1 { margin: 0; font-size: 26px; }
+  .profile-header h1 { margin: 4px 0 0; font-size: 26px; }
   .back-link {
     display: inline-block; margin: 18px 0 0 16px; color: var(--text-muted); text-decoration: none;
   }
@@ -126,7 +127,7 @@
 <body>
 <a class="back-link" href="index.html">← Volver a la web de la peña</a>
 <header class="profile-header">
-  <img class="avatar-big" src="img/avatars/ruben.png" alt="Ruben">
+  <img class="player-card" src="img/cards/ruben.png" alt="Ruben">
   <h1>Ruben</h1>
 </header>
 <div class="summary-grid">
