@@ -121,9 +121,13 @@
   .history-team { font-weight: bold; width: 74px; flex-shrink: 0; }
   .history-score { font-weight: bold; width: 64px; flex-shrink: 0; }
   .history-goals { color: var(--text-muted); font-size: 13px; flex: 1 1 auto; }
+  .history-result-wrap { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
   .history-result {
     width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center;
     justify-content: center; font-weight: bold; font-size: 12px; color: #0b1220; flex-shrink: 0;
+  }
+  .history-ball {
+    font-size: 12px; color: var(--text-muted); white-space: nowrap;
   }
   @media (max-width: 480px) {
     .history-goals { display: none; }
@@ -171,7 +175,10 @@
       <span class="history-team" style="color:#ff7a1a">Naranja</span>
       <span class="history-score">2 — 0</span>
       <span class="history-goals">0 goles</span>
-      <span class="history-result" style="background:#25984a">V</span>
+      <span class="history-result-wrap">
+        <span class="history-result" style="background:#25984a">V</span>
+        
+      </span>
     </a>
   </section>
   <section>
