@@ -94,6 +94,19 @@
     .rank-sub { margin-bottom: 0; }
   }
 
+  details.chronicle { margin-top: 14px; }
+  details.chronicle summary {
+    cursor: pointer; font-weight: bold; color: var(--green-light);
+    list-style: none; padding: 8px 14px; background: var(--bg-card-alt);
+    border-radius: 10px; display: inline-block; font-size: 13px;
+  }
+  details.chronicle summary::-webkit-details-marker { display: none; }
+  details.chronicle[open] summary { margin-bottom: 10px; }
+  details.chronicle p {
+    margin: 0; color: var(--text-light); font-size: 14px; line-height: 1.6;
+    background: var(--bg-card-alt); padding: 12px 14px; border-radius: 10px;
+  }
+
   .profile-header { text-align: center; padding: 20px 16px 10px; }
   .profile-header .player-card {
     max-width: 130px; width: 100%; height: auto; margin: 0 auto 6px; display: block;
