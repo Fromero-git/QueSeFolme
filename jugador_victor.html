@@ -47,14 +47,49 @@
   section h2 { font-size: 22px; margin-bottom: 18px; }
   section > img { max-width: 100%; border-radius: 14px; display: block; margin: 0 auto; }
   .match-card { background: var(--bg-card); border-radius: 16px; padding: 18px; margin-bottom: 22px; }
-  .match-card img { max-width: 100%; border-radius: 10px; display: block; margin: 0 auto; }
-  .match-card h3 { margin: 0 0 12px; color: var(--text-muted); font-size: 15px; font-weight: normal; }
-  .match-card-text .score-row {
-    display: flex; align-items: center; justify-content: center; gap: 16px;
-    font-size: 22px; font-weight: bold; margin-bottom: 14px;
+  .match-card h3 { margin: 0 0 12px; text-align: center; color: var(--text-muted); font-size: 15px; font-weight: normal; }
+
+  /* Alineación en columnas: reemplaza a la antigua imagen del partido —
+     mismo contenido (equipos completos por posición + marcador), pero en
+     HTML/CSS puro reutilizando los avatares que ya se generan para la
+     clasificación, así que no pesa nada y no hay que renderizar nada al
+     publicar. */
+  .lineup-score {
+    text-align: center; margin-bottom: 18px; font-size: 30px; font-weight: bold;
+    font-variant-numeric: tabular-nums;
   }
-  .team.naranja { color: var(--naranja); }
-  .team.amarillo { color: var(--amarillo); }
+  .lineup-score .naranja-n { color: var(--naranja); }
+  .lineup-score .amarillo-n { color: var(--amarillo); }
+  .lineup-score .dash { color: var(--text-muted); font-size: 20px; padding: 0 6px; }
+  .lineup-cols { display: flex; gap: 22px; }
+  .lineup-cols > div { flex: 1; min-width: 0; }
+  .lineup-col-head {
+    font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: .05em;
+    text-align: center; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid;
+  }
+  .lineup-col-head.naranja { color: var(--naranja); border-color: var(--naranja); }
+  .lineup-col-head.amarillo { color: var(--amarillo); border-color: var(--amarillo); }
+  .lineup-pos-group { margin-bottom: 12px; }
+  .lineup-pos-group:last-child { margin-bottom: 0; }
+  .lineup-pos-label {
+    font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 5px;
+  }
+  .lineup-player { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 13px; }
+  .lineup-avatar {
+    width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0; object-fit: cover;
+    background: var(--bg-card-alt);
+  }
+  .lineup-avatar-generic {
+    width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0; background: var(--bg-card-alt);
+    display: flex; align-items: center; justify-content: center; font-size: 11px;
+  }
+  .lineup-player-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lineup-goals { margin-left: auto; font-size: 11px; color: var(--gold); font-weight: bold; flex-shrink: 0; }
+  @media (max-width: 420px) {
+    .lineup-cols { gap: 12px; }
+    .lineup-player { font-size: 12px; }
+  }
+
   .scorers-row { display: flex; justify-content: space-between; gap: 20px; }
   .scorers-row > div { flex: 1; }
   .scorers { list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 1.7; }

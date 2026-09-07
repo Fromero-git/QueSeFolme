@@ -47,14 +47,49 @@
   section h2 { font-size: 22px; margin-bottom: 18px; }
   section > img { max-width: 100%; border-radius: 14px; display: block; margin: 0 auto; }
   .match-card { background: var(--bg-card); border-radius: 16px; padding: 18px; margin-bottom: 22px; }
-  .match-card img { max-width: 100%; border-radius: 10px; display: block; margin: 0 auto; }
-  .match-card h3 { margin: 0 0 12px; color: var(--text-muted); font-size: 15px; font-weight: normal; }
-  .match-card-text .score-row {
-    display: flex; align-items: center; justify-content: center; gap: 16px;
-    font-size: 22px; font-weight: bold; margin-bottom: 14px;
+  .match-card h3 { margin: 0 0 12px; text-align: center; color: var(--text-muted); font-size: 15px; font-weight: normal; }
+
+  /* Alineación en columnas: reemplaza a la antigua imagen del partido —
+     mismo contenido (equipos completos por posición + marcador), pero en
+     HTML/CSS puro reutilizando los avatares que ya se generan para la
+     clasificación, así que no pesa nada y no hay que renderizar nada al
+     publicar. */
+  .lineup-score {
+    text-align: center; margin-bottom: 18px; font-size: 30px; font-weight: bold;
+    font-variant-numeric: tabular-nums;
   }
-  .team.naranja { color: var(--naranja); }
-  .team.amarillo { color: var(--amarillo); }
+  .lineup-score .naranja-n { color: var(--naranja); }
+  .lineup-score .amarillo-n { color: var(--amarillo); }
+  .lineup-score .dash { color: var(--text-muted); font-size: 20px; padding: 0 6px; }
+  .lineup-cols { display: flex; gap: 22px; }
+  .lineup-cols > div { flex: 1; min-width: 0; }
+  .lineup-col-head {
+    font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: .05em;
+    text-align: center; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid;
+  }
+  .lineup-col-head.naranja { color: var(--naranja); border-color: var(--naranja); }
+  .lineup-col-head.amarillo { color: var(--amarillo); border-color: var(--amarillo); }
+  .lineup-pos-group { margin-bottom: 12px; }
+  .lineup-pos-group:last-child { margin-bottom: 0; }
+  .lineup-pos-label {
+    font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 5px;
+  }
+  .lineup-player { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 13px; }
+  .lineup-avatar {
+    width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0; object-fit: cover;
+    background: var(--bg-card-alt);
+  }
+  .lineup-avatar-generic {
+    width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0; background: var(--bg-card-alt);
+    display: flex; align-items: center; justify-content: center; font-size: 11px;
+  }
+  .lineup-player-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lineup-goals { margin-left: auto; font-size: 11px; color: var(--gold); font-weight: bold; flex-shrink: 0; }
+  @media (max-width: 420px) {
+    .lineup-cols { gap: 12px; }
+    .lineup-player { font-size: 12px; }
+  }
+
   .scorers-row { display: flex; justify-content: space-between; gap: 20px; }
   .scorers-row > div { flex: 1; }
   .scorers { list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 1.7; }
@@ -113,7 +148,7 @@
 <header>
   <img class="crest" src="img/escudo.png" alt="Escudo Peña QueSeFolme">
   <h1>Peña QueSeFolme</h1>
-  <p>Resultados y Estadísticas · Actualizado el 06/09/2026 07:29</p>
+  <p>Resultados y Estadísticas · Actualizado el 07/09/2026 09:46</p>
 </header>
 <nav>
   
@@ -511,7 +546,101 @@
     
     <div class="match-card" id="match-20260915">
       <h3>15/09/2026</h3>
-      <img src="img/partido_20260915.png" alt="Resultado del 15/09/2026" loading="lazy">
+      <div class="lineup-score">
+        <span class="naranja-n">2</span><span class="dash">–</span><span class="amarillo-n">1</span>
+      </div>
+      <div class="lineup-cols">
+        <div>
+          <div class="lineup-col-head naranja">Naranja</div>
+          
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Defensas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/alfonso.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Alfonso</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/pablo.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Pablo</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/pibbe.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Pibbe</span>
+              
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Centrocampistas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/bichu.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Bichu</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/ruben.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Ruben</span>
+              
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Delanteros</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/antoniot.png" alt="" loading="lazy">
+              <span class="lineup-player-name">AntonioT</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/dani.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Dani</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/juanjo.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Juanjo</span>
+              <span class="lineup-goals">⚽×2</span>
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/rodrigo.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Rodrigo</span>
+              
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="lineup-col-head amarillo">Amarillo</div>
+          
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Porteros</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/david.png" alt="" loading="lazy">
+              <span class="lineup-player-name">David</span>
+              
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Defensas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/franr.png" alt="" loading="lazy">
+              <span class="lineup-player-name">FranR</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/gago.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Gago</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/raul.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Raul</span>
+              
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Centrocampistas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/antonioc.png" alt="" loading="lazy">
+              <span class="lineup-player-name">AntonioC</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/victor.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Victor</span>
+              
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Delanteros</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/andres.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Andres</span>
+              <span class="lineup-goals">⚽×1</span>
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/joses.png" alt="" loading="lazy">
+              <span class="lineup-player-name">JoseS</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/vega.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Vega</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
       <details class="chronicle">
         <summary>📖 Ver crónica</summary>
         <p>Naranja se lleva un pulso apretado ante Amarillo por 2-1. Con 2 goles, Juanjo decidió el partido por su cuenta.</p>
@@ -520,7 +649,95 @@
 
     <div class="match-card" id="match-20260907">
       <h3>07/09/2026</h3>
-      <img src="img/partido_20260907.png" alt="Resultado del 07/09/2026" loading="lazy">
+      <div class="lineup-score">
+        <span class="naranja-n">3</span><span class="dash">–</span><span class="amarillo-n">2</span>
+      </div>
+      <div class="lineup-cols">
+        <div>
+          <div class="lineup-col-head naranja">Naranja</div>
+          
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Porteros</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/david.png" alt="" loading="lazy">
+              <span class="lineup-player-name">David</span>
+              
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Defensas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/alfonso.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Alfonso</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/gago.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Gago</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/pibbe.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Pibbe</span>
+              <span class="lineup-goals">⚽×1</span>
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Centrocampistas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/victor.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Victor</span>
+              
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Delanteros</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/antoniot.png" alt="" loading="lazy">
+              <span class="lineup-player-name">AntonioT</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/joses.png" alt="" loading="lazy">
+              <span class="lineup-player-name">JoseS</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/juanjo.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Juanjo</span>
+              <span class="lineup-goals">⚽×2</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="lineup-col-head amarillo">Amarillo</div>
+          
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Defensas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/franr.png" alt="" loading="lazy">
+              <span class="lineup-player-name">FranR</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/pablo.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Pablo</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/raul.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Raul</span>
+              
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Centrocampistas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/antonioc.png" alt="" loading="lazy">
+              <span class="lineup-player-name">AntonioC</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/bichu.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Bichu</span>
+              
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Delanteros</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/andres.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Andres</span>
+              <span class="lineup-goals">⚽×1</span>
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/dani.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Dani</span>
+              <span class="lineup-goals">⚽×1</span>
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/rodrigo.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Rodrigo</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
       <details class="chronicle">
         <summary>📖 Ver crónica</summary>
         <p>Nada separó a los dos equipos salvo el marcador: Naranja 3, Amarillo 2. Juanjo fue la gran figura del partido con 2 goles.</p>
