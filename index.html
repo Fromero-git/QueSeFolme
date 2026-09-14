@@ -215,12 +215,13 @@
     gap: 16px;
   }
   .record-card {
-    position: relative; text-align: center; padding: 22px 14px 18px;
+    display: block; position: relative; text-align: center; padding: 22px 14px 18px;
     border-radius: 14px; background: linear-gradient(160deg, var(--bg-card), var(--bg-card-alt));
-    border: 1px solid var(--grid-line);
+    border: 1px solid var(--grid-line); text-decoration: none; color: inherit;
   }
   .record-card.held { border-color: var(--gold); box-shadow: 0 8px 20px rgba(255,210,63,.08); }
-  .record-card.vacant { border-style: dashed; opacity: .82; }
+  .record-card.held:hover { outline: 1px solid var(--green); }
+  .record-card.vacant { border-style: dashed; opacity: .82; cursor: default; }
   .record-crown {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
     font-size: 18px; filter: drop-shadow(0 2px 3px rgba(0,0,0,.6));
@@ -248,7 +249,7 @@
 <header>
   <img class="crest" src="img/escudo.png" alt="Escudo Peña QueSeFolme">
   <h1>Peña QueSeFolme</h1>
-  <p>Resultados y Estadísticas · Actualizado el 14/09/2026 23:25</p>
+  <p>Resultados y Estadísticas · Actualizado el 14/09/2026 23:32</p>
 </header>
 <nav>
   
@@ -565,14 +566,14 @@
         <div class="record-stat">0<span class="unit">seguidos</span></div>
         <div class="vacant-pill">Empate · sin líder claro</div>
       </div>
-      <div class="record-card held">
+      <a class="record-card held" href="jugador_sergio.html">
         <div class="record-crown">👑</div>
         <div class="record-icon">💥</div>
         <div class="record-title">Más goles en un partido</div>
         <div class="record-holder">Sergio</div>
         <div class="record-stat">2<span class="unit">goles</span></div>
         <div class="record-sub">09/09/2026</div>
-      </div>
+      </a>
       <div class="record-card vacant">
         
         <div class="record-icon">🛡️</div>

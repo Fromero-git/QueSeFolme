@@ -215,12 +215,13 @@
     gap: 16px;
   }
   .record-card {
-    position: relative; text-align: center; padding: 22px 14px 18px;
+    display: block; position: relative; text-align: center; padding: 22px 14px 18px;
     border-radius: 14px; background: linear-gradient(160deg, var(--bg-card), var(--bg-card-alt));
-    border: 1px solid var(--grid-line);
+    border: 1px solid var(--grid-line); text-decoration: none; color: inherit;
   }
   .record-card.held { border-color: var(--gold); box-shadow: 0 8px 20px rgba(255,210,63,.08); }
-  .record-card.vacant { border-style: dashed; opacity: .82; }
+  .record-card.held:hover { outline: 1px solid var(--green); }
+  .record-card.vacant { border-style: dashed; opacity: .82; cursor: default; }
   .record-crown {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
     font-size: 18px; filter: drop-shadow(0 2px 3px rgba(0,0,0,.6));
