@@ -172,8 +172,17 @@
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 22px; margin-top: 20px;
   }
   .badge-family { min-width: 0; }
-  .badge-family.single .badge-tiers { justify-content: center; }
-  .badge-family.single .badge-tile { flex: 0 1 140px; }
+  /* "singles-pair": celda que agrupa las familias de una sola insignia
+     (Portería a cero + Post-partidos, si existe cervezas.txt). Si solo hay
+     una, queda centrada sola; si hay dos, se reparten lado a lado —
+     incluso en móvil, donde el resto de familias pasan a ocupar todo el
+     ancho apiladas. */
+  .badge-family.singles-pair {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 32px;
+  }
+  .badge-family.singles-pair .badge-single { flex: 0 1 140px; text-align: center; }
+  .badge-family.singles-pair .badge-single .badge-family-title { margin-bottom: 12px; }
+  .badge-family.singles-pair .badge-tiers { justify-content: center; }
   @media (max-width: 620px) {
     .badge-groups { grid-template-columns: 1fr; }
   }
@@ -249,7 +258,7 @@
 <header>
   <img class="crest" src="img/escudo.png" alt="Escudo Peña QueSeFolme">
   <h1>Peña QueSeFolme</h1>
-  <p>Resultados y Estadísticas · Actualizado el 15/09/2026 00:24</p>
+  <p>Resultados y Estadísticas · Actualizado el 15/09/2026 00:52</p>
 </header>
 <nav>
   
@@ -580,6 +589,14 @@
         <div class="record-title">Racha invicta<br>más larga</div>
         <div class="record-holder">— Vacante —</div>
         <div class="record-stat">1<span class="unit">seguidos</span></div>
+        <div class="vacant-pill">Empate · sin líder claro</div>
+      </div>
+      <div class="record-card vacant">
+        
+        <div class="record-icon">🍺</div>
+        <div class="record-title">Más post-partidos</div>
+        <div class="record-holder">— Vacante —</div>
+        <div class="record-stat">1<span class="unit">asistencias</span></div>
         <div class="vacant-pill">Empate · sin líder claro</div>
       </div>
     </div>

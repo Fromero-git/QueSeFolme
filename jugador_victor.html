@@ -172,8 +172,17 @@
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 22px; margin-top: 20px;
   }
   .badge-family { min-width: 0; }
-  .badge-family.single .badge-tiers { justify-content: center; }
-  .badge-family.single .badge-tile { flex: 0 1 140px; }
+  /* "singles-pair": celda que agrupa las familias de una sola insignia
+     (Portería a cero + Post-partidos, si existe cervezas.txt). Si solo hay
+     una, queda centrada sola; si hay dos, se reparten lado a lado —
+     incluso en móvil, donde el resto de familias pasan a ocupar todo el
+     ancho apiladas. */
+  .badge-family.singles-pair {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 32px;
+  }
+  .badge-family.singles-pair .badge-single { flex: 0 1 140px; text-align: center; }
+  .badge-family.singles-pair .badge-single .badge-family-title { margin-bottom: 12px; }
+  .badge-family.singles-pair .badge-tiers { justify-content: center; }
   @media (max-width: 620px) {
     .badge-groups { grid-template-columns: 1fr; }
   }
@@ -374,14 +383,26 @@
           </div>
         </div>
       </div>
-      <div class="badge-family single">
-        <div class="badge-family-title">Portería a cero</div>
-        <div class="badge-tiers">
+      <div class="badge-family singles-pair">
+        <div class="badge-single">
+          <div class="badge-family-title">Portería a cero</div>
+          <div class="badge-tiers">
           <div class="badge-tile locked tier-silver">
             <div class="badge-ring">🥅<span class="badge-lock">🔒</span></div>
             <div class="badge-name">5 partidos a cero</div>
             <div class="badge-sub">0 de 5 partidos</div>
             <div class="badge-progress"><div class="badge-progress-fill" style="width:0%"></div></div>
+          </div>
+          </div>
+        </div>
+        <div class="badge-single">
+          <div class="badge-family-title">Post-partidos</div>
+          <div class="badge-tiers">
+          <div class="badge-tile locked tier-silver">
+            <div class="badge-ring">🍺<span class="badge-lock">🔒</span></div>
+            <div class="badge-name">0 asistencias</div>
+            <div class="badge-sub">Aún no te has quedado a ningún post-partido</div>
+          </div>
           </div>
         </div>
       </div>
