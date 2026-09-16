@@ -165,6 +165,93 @@
     background: var(--bg-card-alt); padding: 12px 14px; border-radius: 10px;
   }
 
+  :root { --grid-line: #1c2740; }
+
+  /* ---- insignias (ficha de jugador) ---- */
+  .badge-groups {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 22px; margin-top: 20px;
+  }
+  .badge-family { min-width: 0; }
+  /* "singles-pair": celda que agrupa las familias de una sola insignia
+     (Portería a cero + Post-partidos, si existe cervezas.txt). Si solo hay
+     una, queda centrada sola; si hay dos, se reparten lado a lado —
+     incluso en móvil, donde el resto de familias pasan a ocupar todo el
+     ancho apiladas. */
+  .badge-family.singles-pair {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 32px;
+  }
+  .badge-family.singles-pair .badge-single { flex: 0 1 140px; text-align: center; }
+  .badge-family.singles-pair .badge-single .badge-family-title { margin-bottom: 12px; }
+  .badge-family.singles-pair .badge-tiers { justify-content: center; }
+  @media (max-width: 620px) {
+    .badge-groups { grid-template-columns: 1fr; }
+  }
+  .badge-family-title {
+    font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: .05em;
+    color: var(--text-muted); margin-bottom: 12px;
+  }
+  .badge-tiers { display: flex; align-items: center; gap: 8px; }
+  .badge-connector { color: var(--grid-line); font-size: 20px; flex-shrink: 0; }
+  .badge-tile { flex: 1 1 0; text-align: center; padding: 4px 2px; }
+  .badge-ring {
+    width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; position: relative;
+    display: flex; align-items: center; justify-content: center; font-size: 28px;
+    background: var(--bg-card); border: 3px solid var(--silver);
+  }
+  .badge-tile.tier-gold .badge-ring { border-color: var(--gold); }
+  .badge-tile.tier-silver .badge-ring { border-color: var(--silver); }
+  .badge-tile.earned .badge-ring { box-shadow: 0 0 0 4px rgba(255,255,255,.03), 0 6px 16px rgba(0,0,0,.4); }
+  .badge-tile.locked .badge-ring { border-color: var(--bg-card-alt); filter: grayscale(1); opacity: .38; }
+  .badge-lock {
+    position: absolute; bottom: -2px; right: -2px; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--bg-card-alt); border: 2px solid var(--bg-dark); display: flex;
+    align-items: center; justify-content: center; font-size: 11px;
+  }
+  .badge-name { font-size: 13px; font-weight: bold; }
+  .badge-tile.locked .badge-name { color: var(--text-muted); }
+  .badge-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+  .badge-progress {
+    background: rgba(0,0,0,.3); border-radius: 6px; height: 5px; overflow: hidden;
+    max-width: 80px; margin: 6px auto 0;
+  }
+  .badge-progress-fill { background: var(--green-light); height: 100%; }
+  .badge-date { font-size: 10px; color: var(--green-light); margin-top: 3px; }
+
+  /* ---- récords de la liga (index.html) ---- */
+  .record-grid {
+    margin-top: 4px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
+  }
+  .record-card {
+    display: block; position: relative; text-align: center; padding: 22px 14px 18px;
+    border-radius: 14px; background: linear-gradient(160deg, var(--bg-card), var(--bg-card-alt));
+    border: 1px solid var(--grid-line); text-decoration: none; color: inherit;
+  }
+  .record-card.held { border-color: var(--gold); box-shadow: 0 8px 20px rgba(255,210,63,.08); }
+  .record-card.held:hover { outline: 1px solid var(--green); }
+  .record-card.vacant { border-style: dashed; opacity: .82; cursor: default; }
+  .record-crown {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    font-size: 18px; filter: drop-shadow(0 2px 3px rgba(0,0,0,.6));
+  }
+  .record-icon { font-size: 26px; margin-bottom: 8px; }
+  .record-title {
+    font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: .04em;
+    color: var(--text-muted); margin-bottom: 14px; min-height: 28px;
+  }
+  .record-holder { font-size: 17px; font-weight: bold; color: var(--gold); }
+  .record-card.vacant .record-holder { color: var(--text-muted); font-weight: normal; font-style: italic; }
+  .record-stat { font-size: 28px; font-weight: bold; margin: 3px 0 0; font-variant-numeric: tabular-nums; }
+  .record-card.vacant .record-stat { color: var(--text-muted); }
+  .record-stat .unit { font-size: 11px; font-weight: normal; color: var(--text-muted); margin-left: 3px; }
+  .record-sub { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+  .vacant-pill {
+    display: inline-block; font-size: 10px; font-weight: bold; letter-spacing: .05em;
+    text-transform: uppercase; color: var(--text-muted); background: var(--bg-card-alt);
+    border: 1px solid var(--grid-line); border-radius: 20px; padding: 3px 10px; margin-top: 8px;
+  }
+
   .profile-header { text-align: center; padding: 20px 16px 10px; }
   .profile-header .player-card {
     max-width: 130px; width: 100%; height: auto; margin: 0 auto 6px; display: block;
@@ -231,64 +318,103 @@
   <h1>Raul</h1>
 </header>
 <div class="summary-grid">
-  <div class="summary-item"><span class="num">5</span><span class="label">PARTIDOS</span></div>
-  <div class="summary-item"><span class="num">4</span><span class="label">PUNTOS</span></div>
-  <div class="summary-item"><span class="num">0.80</span><span class="label">PPM</span></div>
-  <div class="summary-item"><span class="num">1</span><span class="label">GOLES</span></div>
-  <div class="summary-item"><span class="num">0.20</span><span class="label">GPM</span></div>
+  <div class="summary-item"><span class="num">1</span><span class="label">PARTIDOS</span></div>
+  <div class="summary-item"><span class="num">0</span><span class="label">PUNTOS</span></div>
+  <div class="summary-item"><span class="num">0.00</span><span class="label">PPM</span></div>
+  <div class="summary-item"><span class="num">0</span><span class="label">GOLES</span></div>
+  <div class="summary-item"><span class="num">0.00</span><span class="label">GPM</span></div>
 </div>
 <main>
-  <section style="border-top: none;">
+  
+  <section>
+    <h2>🏅 Insignias</h2>
+    <div class="badge-groups">
+      <div class="badge-family">
+        <div class="badge-family-title">Killer del área</div>
+        <div class="badge-tiers">
+          <div class="badge-tile locked tier-silver">
+            <div class="badge-ring">⚽<span class="badge-lock">🔒</span></div>
+            <div class="badge-name">Hat-trick</div>
+            <div class="badge-sub">Todavía sin goles</div>
+            
+          </div>
+          <span class="badge-connector">→</span>
+          <div class="badge-tile locked tier-gold">
+            <div class="badge-ring">⚽<span class="badge-lock">🔒</span></div>
+            <div class="badge-name">Póker de goles</div>
+            <div class="badge-sub">Todavía sin goles</div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="badge-family">
+        <div class="badge-family-title">Cadena de Partidos Jugados</div>
+        <div class="badge-tiers">
+          <div class="badge-tile locked tier-silver">
+            <div class="badge-ring">🔗<span class="badge-lock">🔒</span></div>
+            <div class="badge-name">10 seguidos</div>
+            <div class="badge-sub">1 de 10 partidos</div>
+            <div class="badge-progress"><div class="badge-progress-fill" style="width:10%"></div></div>
+          </div>
+          <span class="badge-connector">→</span>
+          <div class="badge-tile locked tier-gold">
+            <div class="badge-ring">🔗<span class="badge-lock">🔒</span></div>
+            <div class="badge-name">20 seguidos</div>
+            <div class="badge-sub">1 de 20 partidos</div>
+            <div class="badge-progress"><div class="badge-progress-fill" style="width:5%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="badge-family">
+        <div class="badge-family-title">Invicto</div>
+        <div class="badge-tiers">
+          <div class="badge-tile locked tier-silver">
+            <div class="badge-ring">🛡️<span class="badge-lock">🔒</span></div>
+            <div class="badge-name">5 seguidos</div>
+            <div class="badge-sub">0 de 5 partidos</div>
+            <div class="badge-progress"><div class="badge-progress-fill" style="width:0%"></div></div>
+          </div>
+          <span class="badge-connector">→</span>
+          <div class="badge-tile locked tier-gold">
+            <div class="badge-ring">🛡️<span class="badge-lock">🔒</span></div>
+            <div class="badge-name">10 seguidos</div>
+            <div class="badge-sub">0 de 10 partidos</div>
+            <div class="badge-progress"><div class="badge-progress-fill" style="width:0%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="badge-family singles-pair">
+        <div class="badge-single">
+          <div class="badge-family-title">Portería a cero</div>
+          <div class="badge-tiers">
+          <div class="badge-tile locked tier-silver">
+            <div class="badge-ring">🥅<span class="badge-lock">🔒</span></div>
+            <div class="badge-name">5 partidos a cero</div>
+            <div class="badge-sub">0 de 5 partidos</div>
+            <div class="badge-progress"><div class="badge-progress-fill" style="width:0%"></div></div>
+          </div>
+          </div>
+        </div>
+        <div class="badge-single">
+          <div class="badge-family-title">Post-partidos</div>
+          <div class="badge-tiers">
+          <div class="badge-tile locked tier-silver">
+            <div class="badge-ring">🍺<span class="badge-lock">🔒</span></div>
+            <div class="badge-name">0 asistencias</div>
+            <div class="badge-sub">Aún no te has quedado a ningún post-partido</div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
     <h2>📅 Historial de partidos</h2>
     
-    <a class="history-row" href="index.html#match-20260928">
-      <span class="history-date">28/09/2026</span>
-      <span class="history-team" style="color:#ff7a1a">Naranja</span>
-      <span class="history-score">2 — 2</span>
-      <span class="history-goals">0 goles</span>
-      <span class="history-result-wrap">
-        <span class="history-result" style="background:#9aa5b1">E</span>
-        
-      </span>
-    </a>
-
-    <a class="history-row" href="index.html#match-20260927">
-      <span class="history-date">27/09/2026</span>
-      <span class="history-team" style="color:#ff7a1a">Naranja</span>
-      <span class="history-score">3 — 1</span>
-      <span class="history-goals">0 goles</span>
-      <span class="history-result-wrap">
-        <span class="history-result" style="background:#25984a">V</span>
-        
-      </span>
-    </a>
-
     <a class="history-row" href="index.html#match-20260916">
       <span class="history-date">16/09/2026</span>
-      <span class="history-team" style="color:#ffd400">Amarillo</span>
-      <span class="history-score">1 — 2</span>
-      <span class="history-goals">1 gol</span>
-      <span class="history-result-wrap">
-        <span class="history-result" style="background:#ff4d4d">D</span>
-        <span class="history-ball" title="1 gol">⚽ 1</span>
-      </span>
-    </a>
-
-    <a class="history-row" href="index.html#match-20260915">
-      <span class="history-date">15/09/2026</span>
-      <span class="history-team" style="color:#ffd400">Amarillo</span>
-      <span class="history-score">1 — 2</span>
-      <span class="history-goals">0 goles</span>
-      <span class="history-result-wrap">
-        <span class="history-result" style="background:#ff4d4d">D</span>
-        
-      </span>
-    </a>
-
-    <a class="history-row" href="index.html#match-20260907">
-      <span class="history-date">07/09/2026</span>
-      <span class="history-team" style="color:#ffd400">Amarillo</span>
-      <span class="history-score">2 — 3</span>
+      <span class="history-team" style="color:#ff7a1a">Naranja</span>
+      <span class="history-score">3 — 7</span>
       <span class="history-goals">0 goles</span>
       <span class="history-result-wrap">
         <span class="history-result" style="background:#ff4d4d">D</span>
@@ -299,178 +425,10 @@
   <section>
     <h2>🆚 Rivalidades</h2>
     
-    <a class="h2h-row h2h-loss" href="jugador_alfonso.html">
-      <img class="avatar" src="img/avatars/alfonso.png" alt="">
+    <a class="h2h-row h2h-loss" href="jugador_angel.html">
+      <img class="avatar" src="img/avatars/angel.png" alt="">
       <div class="h2h-info">
-        <div class="h2h-name">Alfonso</div>
-        <div class="h2h-sub">4 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">0V · 1E · 3D</span>
-        <span class="h2h-tag">EN CONTRA</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-loss" href="jugador_david.html">
-      <img class="avatar" src="img/avatars/david.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">David</div>
-        <div class="h2h-sub">3 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">1V · 0E · 2D</span>
-        <span class="h2h-tag">EN CONTRA</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-loss" href="jugador_gago.html">
-      <img class="avatar" src="img/avatars/gago.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">Gago</div>
-        <div class="h2h-sub">3 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">1V · 0E · 2D</span>
-        <span class="h2h-tag">EN CONTRA</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-draw" href="jugador_joses.html">
-      <img class="avatar" src="img/avatars/joses.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">JoseS</div>
-        <div class="h2h-sub">3 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">1V · 1E · 1D</span>
-        <span class="h2h-tag">IGUALADOS</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-loss" href="jugador_juanjo.html">
-      <img class="avatar" src="img/avatars/juanjo.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">Juanjo</div>
-        <div class="h2h-sub">3 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">1V · 0E · 2D</span>
-        <span class="h2h-tag">EN CONTRA</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-loss" href="jugador_antoniot.html">
-      <img class="avatar" src="img/avatars/antoniot.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">AntonioT</div>
-        <div class="h2h-sub">2 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">0V · 0E · 2D</span>
-        <span class="h2h-tag">EN CONTRA</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-loss" href="jugador_bichu.html">
-      <img class="avatar" src="img/avatars/bichu.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">Bichu</div>
-        <div class="h2h-sub">2 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">0V · 0E · 2D</span>
-        <span class="h2h-tag">EN CONTRA</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-loss" href="jugador_dani.html">
-      <img class="avatar" src="img/avatars/dani.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">Dani</div>
-        <div class="h2h-sub">2 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">0V · 0E · 2D</span>
-        <span class="h2h-tag">EN CONTRA</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-draw" href="jugador_franr.html">
-      <img class="avatar" src="img/avatars/franr.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">FranR</div>
-        <div class="h2h-sub">2 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">1V · 0E · 1D</span>
-        <span class="h2h-tag">IGUALADOS</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-draw" href="jugador_pablo.html">
-      <img class="avatar" src="img/avatars/pablo.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">Pablo</div>
-        <div class="h2h-sub">2 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">1V · 0E · 1D</span>
-        <span class="h2h-tag">IGUALADOS</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-loss" href="jugador_pibbe.html">
-      <img class="avatar" src="img/avatars/pibbe.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">Pibbe</div>
-        <div class="h2h-sub">2 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">0V · 0E · 2D</span>
-        <span class="h2h-tag">EN CONTRA</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-loss" href="jugador_rodrigo.html">
-      <img class="avatar" src="img/avatars/rodrigo.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">Rodrigo</div>
-        <div class="h2h-sub">2 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">0V · 1E · 1D</span>
-        <span class="h2h-tag">EN CONTRA</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-draw" href="jugador_ruben.html">
-      <img class="avatar" src="img/avatars/ruben.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">Ruben</div>
-        <div class="h2h-sub">2 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">1V · 0E · 1D</span>
-        <span class="h2h-tag">IGUALADOS</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-loss" href="jugador_vega.html">
-      <img class="avatar" src="img/avatars/vega.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">Vega</div>
-        <div class="h2h-sub">2 enfrentamientos como rivales</div>
-      </div>
-      <div class="h2h-record">
-        <span class="h2h-wdl">0V · 1E · 1D</span>
-        <span class="h2h-tag">EN CONTRA</span>
-      </div>
-    </a>
-
-    <a class="h2h-row h2h-loss" href="jugador_andres.html">
-      <img class="avatar" src="img/avatars/andres.png" alt="">
-      <div class="h2h-info">
-        <div class="h2h-name">Andres</div>
+        <div class="h2h-name">Angel</div>
         <div class="h2h-sub">1 enfrentamientos como rivales</div>
       </div>
       <div class="h2h-record">
@@ -479,34 +437,70 @@
       </div>
     </a>
 
-    <a class="h2h-row h2h-draw" href="jugador_antonioc.html">
+    <a class="h2h-row h2h-loss" href="jugador_antonioc.html">
       <img class="avatar" src="img/avatars/antonioc.png" alt="">
       <div class="h2h-info">
         <div class="h2h-name">AntonioC</div>
         <div class="h2h-sub">1 enfrentamientos como rivales</div>
       </div>
       <div class="h2h-record">
-        <span class="h2h-wdl">0V · 1E · 0D</span>
-        <span class="h2h-tag">IGUALADOS</span>
+        <span class="h2h-wdl">0V · 0E · 1D</span>
+        <span class="h2h-tag">EN CONTRA</span>
       </div>
     </a>
 
-    <a class="h2h-row h2h-draw" href="jugador_sergio.html">
-      <img class="avatar" src="img/avatars/sergio.png" alt="">
+    <a class="h2h-row h2h-loss" href="jugador_antonior.html">
+      <img class="avatar" src="img/avatars/antonior.png" alt="">
       <div class="h2h-info">
-        <div class="h2h-name">Sergio</div>
+        <div class="h2h-name">AntonioR</div>
         <div class="h2h-sub">1 enfrentamientos como rivales</div>
       </div>
       <div class="h2h-record">
-        <span class="h2h-wdl">0V · 1E · 0D</span>
-        <span class="h2h-tag">IGUALADOS</span>
+        <span class="h2h-wdl">0V · 0E · 1D</span>
+        <span class="h2h-tag">EN CONTRA</span>
       </div>
     </a>
 
-    <a class="h2h-row h2h-loss" href="jugador_victor.html">
-      <img class="avatar" src="img/avatars/victor.png" alt="">
+    <a class="h2h-row h2h-loss" href="jugador_franr.html">
+      <img class="avatar" src="img/avatars/franr.png" alt="">
       <div class="h2h-info">
-        <div class="h2h-name">Victor</div>
+        <div class="h2h-name">FranR</div>
+        <div class="h2h-sub">1 enfrentamientos como rivales</div>
+      </div>
+      <div class="h2h-record">
+        <span class="h2h-wdl">0V · 0E · 1D</span>
+        <span class="h2h-tag">EN CONTRA</span>
+      </div>
+    </a>
+
+    <a class="h2h-row h2h-loss" href="jugador_joses.html">
+      <img class="avatar" src="img/avatars/joses.png" alt="">
+      <div class="h2h-info">
+        <div class="h2h-name">JoseS</div>
+        <div class="h2h-sub">1 enfrentamientos como rivales</div>
+      </div>
+      <div class="h2h-record">
+        <span class="h2h-wdl">0V · 0E · 1D</span>
+        <span class="h2h-tag">EN CONTRA</span>
+      </div>
+    </a>
+
+    <a class="h2h-row h2h-loss" href="jugador_juanjo.html">
+      <img class="avatar" src="img/avatars/juanjo.png" alt="">
+      <div class="h2h-info">
+        <div class="h2h-name">Juanjo</div>
+        <div class="h2h-sub">1 enfrentamientos como rivales</div>
+      </div>
+      <div class="h2h-record">
+        <span class="h2h-wdl">0V · 0E · 1D</span>
+        <span class="h2h-tag">EN CONTRA</span>
+      </div>
+    </a>
+
+    <a class="h2h-row h2h-loss" href="jugador_sergio.html">
+      <img class="avatar" src="img/avatars/sergio.png" alt="">
+      <div class="h2h-info">
+        <div class="h2h-name">Sergio</div>
         <div class="h2h-sub">1 enfrentamientos como rivales</div>
       </div>
       <div class="h2h-record">
