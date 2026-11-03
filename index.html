@@ -101,6 +101,16 @@
   .scorers-row > div { flex: 1; }
   .scorers { list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 1.7; }
   .muted { color: var(--text-muted); }
+
+  .publi-block { text-align: center; padding-top: 32px; }
+  .publi-block .publi-label {
+    display: block; font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 10px;
+  }
+  .publi-link { display: inline-block; }
+  .publi-img { display: block; max-width: 160px; width: 100%; height: auto; margin: 0 auto; opacity: .92; transition: opacity .15s; }
+  .publi-link:hover .publi-img { opacity: 1; }
+
   footer { text-align: center; color: var(--text-muted); font-size: 12px; padding-top: 24px; }
 
   .rank-row {
@@ -258,7 +268,7 @@
 <header>
   <img class="crest" src="img/escudo.png" alt="Escudo Peña QueSeFolme">
   <h1>Peña QueSeFolme</h1>
-  <p>Resultados y Estadísticas · Actualizado el 29/10/2026 09:17</p>
+  <p>Resultados y Estadísticas · Actualizado el 03/11/2026 17:39</p>
 </header>
 <nav>
   
@@ -1561,6 +1571,12 @@
     </div>
   </section>
 </main>
+<div class="publi-block">
+  <span class="publi-label">Publicidad</span>
+  <a class="publi-link" href="https://www.alojamientosbarbieri.com/es" target="_blank" rel="noopener sponsored">
+    <img class="publi-img" src="img/publi_tucan_blanco.png" alt="Alojamientos Barbieri">
+  </a>
+</div>
 <footer>Generado automáticamente por Team Manager · Haz clic en un jugador para ver su ficha</footer>
 </body>
 </html>
