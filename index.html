@@ -268,31 +268,33 @@
 <header>
   <img class="crest" src="img/escudo.png" alt="Escudo Peña QueSeFolme">
   <h1>Peña QueSeFolme</h1>
-  <p>Resultados y Estadísticas · Actualizado el 25/11/2026 17:25</p>
+  <p>Resultados y Estadísticas · Actualizado el 25/11/2026 23:18</p>
 </header>
 <nav>
-  <a href="#proximo">🔜 Próximo partido</a>
+  
   <a href="#clasificacion">🏆 Clasificación</a>
   <a href="#goleadores">⚽ Goleadores</a>
   <a href="#records">👑 Récords</a>
   <a href="#partidos">📅 Partidos</a>
 </nav>
 <main>
-  <section id="proximo">
-    <h2>🔜 Próximo partido</h2>
-    
-    <p class="muted" style="text-align:center;">25/11/2026</p>
-    <img src="img/proximo_partido.png" alt="Alineación del 25/11/2026" loading="lazy">
-    <div class="scorers-row" style="margin-top:18px;">
-      <div><h3 style="color:var(--naranja);">Naranja</h3><ul class="scorers"><li>Alfonso <span class="muted">(DEF)</span></li><li>Bichu <span class="muted">(MED)</span></li><li>Gago <span class="muted">(DEF)</span></li><li>Marcos <span class="muted">(MED)</span></li><li>Rafa <span class="muted">(DEL)</span></li><li>Raul <span class="muted">(DEF)</span></li><li>Ruben <span class="muted">(MED)</span></li></ul></div>
-      <div><h3 style="color:var(--amarillo);">Amarillo</h3><ul class="scorers"><li>Andres <span class="muted">(DEL)</span></li><li>AntonioC <span class="muted">(MED)</span></li><li>FranR <span class="muted">(DEF)</span></li><li>Juanjo <span class="muted">(DEL)</span></li><li>Pablo <span class="muted">(DEF)</span></li><li>Pibbe <span class="muted">(DEF)</span></li><li>Rodrigo <span class="muted">(MED)</span></li></ul></div>
-    </div>
-  </section>
   <section id="clasificacion">
     <h2>🏆 Clasificación general</h2>
     
-    <a class="rank-row rank-1" href="jugador_joses.html">
+    <a class="rank-row rank-1" href="jugador_franr.html">
       <div class="rank-badge">1</div>
+      <img class="avatar" src="img/avatars/franr.png" alt="">
+      <div class="rank-info">
+        <div class="rank-name">FranR <span class="streak-chip streak-fire" title="5 partidos sin perder">🔥 5</span></div>
+        <div class="rank-sub">PJ 10 · PPM 2.20 · Goles 3 · GPM 0.30</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:73%"></div></div>
+      </div>
+      <div class="rank-points">22<span>PTS</span></div>
+      <span class="move-chip move-up" title="Sube 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>1</span>
+    </a>
+
+    <a class="rank-row rank-2" href="jugador_joses.html">
+      <div class="rank-badge">2</div>
       <img class="avatar" src="img/avatars/joses.png" alt="">
       <div class="rank-info">
         <div class="rank-name">JoseS </div>
@@ -300,47 +302,59 @@
         <div class="rank-bar"><div class="rank-bar-fill" style="width:70%"></div></div>
       </div>
       <div class="rank-points">19<span>PTS</span></div>
-      <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
+      <span class="move-chip move-down" title="Baja 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>1</span>
     </a>
 
-    <a class="rank-row rank-2" href="jugador_franr.html">
-      <div class="rank-badge">2</div>
-      <img class="avatar" src="img/avatars/franr.png" alt="">
-      <div class="rank-info">
-        <div class="rank-name">FranR <span class="streak-chip streak-fire" title="4 partidos sin perder">🔥 4</span></div>
-        <div class="rank-sub">PJ 9 · PPM 2.11 · Goles 3 · GPM 0.33</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:70%"></div></div>
-      </div>
-      <div class="rank-points">19<span>PTS</span></div>
-      <span class="move-chip move-up" title="Sube 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>1</span>
-    </a>
-
-    <a class="rank-row rank-3" href="jugador_marcos.html">
+    <a class="rank-row rank-3" href="jugador_andres.html">
       <div class="rank-badge">3</div>
+      <img class="avatar" src="img/avatars/andres.png" alt="">
+      <div class="rank-info">
+        <div class="rank-name">Andres <span class="streak-chip streak-goal" title="4 partidos seguidos marcando">⚽ 4</span></div>
+        <div class="rank-sub">PJ 11 · PPM 1.45 · Goles 13 · GPM 1.18</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:48%"></div></div>
+      </div>
+      <div class="rank-points">16<span>PTS</span></div>
+      <span class="move-chip move-up" title="Sube 3 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>3</span>
+    </a>
+
+    <a class="rank-row " href="jugador_marcos.html">
+      <div class="rank-badge">4</div>
       <img class="avatar" src="img/avatars/marcos.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Marcos <span class="streak-chip streak-fire" title="4 partidos sin perder">🔥 4</span> <span class="streak-chip streak-goal" title="2 partidos seguidos marcando">⚽ 2</span></div>
-        <div class="rank-sub">PJ 7 · PPM 2.29 · Goles 5 · GPM 0.71</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:76%"></div></div>
+        <div class="rank-name">Marcos </div>
+        <div class="rank-sub">PJ 8 · PPM 2.00 · Goles 5 · GPM 0.62</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:67%"></div></div>
       </div>
       <div class="rank-points">16<span>PTS</span></div>
       <span class="move-chip move-down" title="Baja 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>1</span>
     </a>
 
-    <a class="rank-row " href="jugador_alfonso.html">
-      <div class="rank-badge">4</div>
-      <img class="avatar" src="img/avatars/alfonso.png" alt="">
+    <a class="rank-row " href="jugador_rodrigo.html">
+      <div class="rank-badge">5</div>
+      <img class="avatar" src="img/avatars/rodrigo.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Alfonso </div>
-        <div class="rank-sub">PJ 9 · PPM 1.78 · Goles 0 · GPM 0.00</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:59%"></div></div>
+        <div class="rank-name">Rodrigo <span class="streak-chip streak-fire" title="2 partidos sin perder">🔥 2</span></div>
+        <div class="rank-sub">PJ 8 · PPM 2.00 · Goles 5 · GPM 0.62</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:67%"></div></div>
       </div>
       <div class="rank-points">16<span>PTS</span></div>
       <span class="move-chip move-up" title="Sube 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>2</span>
     </a>
 
+    <a class="rank-row " href="jugador_alfonso.html">
+      <div class="rank-badge">6</div>
+      <img class="avatar" src="img/avatars/alfonso.png" alt="">
+      <div class="rank-info">
+        <div class="rank-name">Alfonso </div>
+        <div class="rank-sub">PJ 10 · PPM 1.60 · Goles 0 · GPM 0.00</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:53%"></div></div>
+      </div>
+      <div class="rank-points">16<span>PTS</span></div>
+      <span class="move-chip move-down" title="Baja 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>2</span>
+    </a>
+
     <a class="rank-row " href="jugador_dani.html">
-      <div class="rank-badge">5</div>
+      <div class="rank-badge">7</div>
       <img class="avatar" src="img/avatars/dani.png" alt="">
       <div class="rank-info">
         <div class="rank-name">Dani <span class="streak-chip streak-fire" title="4 partidos sin perder">🔥 4</span></div>
@@ -348,127 +362,103 @@
         <div class="rank-bar"><div class="rank-bar-fill" style="width:83%"></div></div>
       </div>
       <div class="rank-points">15<span>PTS</span></div>
-      <span class="move-chip move-up" title="Sube 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>2</span>
+      <span class="move-chip move-down" title="Baja 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>2</span>
     </a>
 
-    <a class="rank-row " href="jugador_andres.html">
-      <div class="rank-badge">6</div>
-      <img class="avatar" src="img/avatars/andres.png" alt="">
+    <a class="rank-row " href="jugador_antonioc.html">
+      <div class="rank-badge">8</div>
+      <img class="avatar" src="img/avatars/antonioc.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Andres <span class="streak-chip streak-goal" title="3 partidos seguidos marcando">⚽ 3</span></div>
-        <div class="rank-sub">PJ 10 · PPM 1.30 · Goles 10 · GPM 1.00</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:43%"></div></div>
+        <div class="rank-name">AntonioC </div>
+        <div class="rank-sub">PJ 8 · PPM 1.62 · Goles 4 · GPM 0.50</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:54%"></div></div>
+      </div>
+      <div class="rank-points">13<span>PTS</span></div>
+      <span class="move-chip move-up" title="Sube 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>1</span>
+    </a>
+
+    <a class="rank-row " href="jugador_pibbe.html">
+      <div class="rank-badge">9</div>
+      <img class="avatar" src="img/avatars/pibbe.png" alt="">
+      <div class="rank-info">
+        <div class="rank-name">Pibbe <span class="streak-chip streak-fire" title="3 partidos sin perder">🔥 3</span></div>
+        <div class="rank-sub">PJ 9 · PPM 1.44 · Goles 2 · GPM 0.22</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:48%"></div></div>
+      </div>
+      <div class="rank-points">13<span>PTS</span></div>
+      <span class="move-chip move-up" title="Sube 3 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>3</span>
+    </a>
+
+    <a class="rank-row " href="jugador_raul.html">
+      <div class="rank-badge">10</div>
+      <img class="avatar" src="img/avatars/raul.png" alt="">
+      <div class="rank-info">
+        <div class="rank-name">Raul </div>
+        <div class="rank-sub">PJ 9 · PPM 1.44 · Goles 2 · GPM 0.22</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:48%"></div></div>
       </div>
       <div class="rank-points">13<span>PTS</span></div>
       <span class="move-chip move-down" title="Baja 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>2</span>
     </a>
 
-    <a class="rank-row " href="jugador_rodrigo.html">
-      <div class="rank-badge">7</div>
-      <img class="avatar" src="img/avatars/rodrigo.png" alt="">
-      <div class="rank-info">
-        <div class="rank-name">Rodrigo </div>
-        <div class="rank-sub">PJ 7 · PPM 1.86 · Goles 3 · GPM 0.43</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:62%"></div></div>
-      </div>
-      <div class="rank-points">13<span>PTS</span></div>
-      <span class="move-chip move-up" title="Sube 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>2</span>
-    </a>
-
-    <a class="rank-row " href="jugador_raul.html">
-      <div class="rank-badge">8</div>
-      <img class="avatar" src="img/avatars/raul.png" alt="">
-      <div class="rank-info">
-        <div class="rank-name">Raul </div>
-        <div class="rank-sub">PJ 8 · PPM 1.62 · Goles 1 · GPM 0.12</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:54%"></div></div>
-      </div>
-      <div class="rank-points">13<span>PTS</span></div>
-      <span class="move-chip move-down" title="Baja 3 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>3</span>
-    </a>
-
-    <a class="rank-row " href="jugador_antonioc.html">
-      <div class="rank-badge">9</div>
-      <img class="avatar" src="img/avatars/antonioc.png" alt="">
-      <div class="rank-info">
-        <div class="rank-name">AntonioC </div>
-        <div class="rank-sub">PJ 7 · PPM 1.43 · Goles 4 · GPM 0.57</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:48%"></div></div>
-      </div>
-      <div class="rank-points">10<span>PTS</span></div>
-      <span class="move-chip move-down" title="Baja 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>1</span>
-    </a>
-
-    <a class="rank-row " href="jugador_ruben.html">
-      <div class="rank-badge">10</div>
-      <img class="avatar" src="img/avatars/ruben.png" alt="">
-      <div class="rank-info">
-        <div class="rank-name">Ruben </div>
-        <div class="rank-sub">PJ 8 · PPM 1.25 · Goles 3 · GPM 0.38</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:42%"></div></div>
-      </div>
-      <div class="rank-points">10<span>PTS</span></div>
-      <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
-    </a>
-
-    <a class="rank-row " href="jugador_gago.html">
+    <a class="rank-row " href="jugador_juanjo.html">
       <div class="rank-badge">11</div>
-      <img class="avatar" src="img/avatars/gago.png" alt="">
+      <img class="avatar" src="img/avatars/juanjo.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Gago </div>
-        <div class="rank-sub">PJ 9 · PPM 1.11 · Goles 2 · GPM 0.22</div>
+        <div class="rank-name">Juanjo <span class="streak-chip streak-goal" title="2 partidos seguidos marcando">⚽ 2</span></div>
+        <div class="rank-sub">PJ 9 · PPM 1.11 · Goles 16 · GPM 1.78</div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:37%"></div></div>
       </div>
       <div class="rank-points">10<span>PTS</span></div>
-      <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
+      <span class="move-chip move-up" title="Sube 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>2</span>
     </a>
 
-    <a class="rank-row " href="jugador_pibbe.html">
+    <a class="rank-row " href="jugador_ruben.html">
       <div class="rank-badge">12</div>
-      <img class="avatar" src="img/avatars/pibbe.png" alt="">
+      <img class="avatar" src="img/avatars/ruben.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Pibbe <span class="streak-chip streak-fire" title="2 partidos sin perder">🔥 2</span></div>
-        <div class="rank-sub">PJ 8 · PPM 1.25 · Goles 1 · GPM 0.12</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:42%"></div></div>
+        <div class="rank-name">Ruben </div>
+        <div class="rank-sub">PJ 9 · PPM 1.11 · Goles 6 · GPM 0.67</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:37%"></div></div>
       </div>
       <div class="rank-points">10<span>PTS</span></div>
-      <span class="move-chip move-up" title="Sube 4 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>4</span>
+      <span class="move-chip move-down" title="Baja 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>2</span>
     </a>
 
-    <a class="rank-row " href="jugador_juanjo.html">
+    <a class="rank-row " href="jugador_gago.html">
       <div class="rank-badge">13</div>
-      <img class="avatar" src="img/avatars/juanjo.png" alt="">
+      <img class="avatar" src="img/avatars/gago.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Juanjo </div>
-        <div class="rank-sub">PJ 8 · PPM 0.88 · Goles 15 · GPM 1.88</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:29%"></div></div>
+        <div class="rank-name">Gago </div>
+        <div class="rank-sub">PJ 10 · PPM 1.00 · Goles 2 · GPM 0.20</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:33%"></div></div>
       </div>
-      <div class="rank-points">7<span>PTS</span></div>
-      <span class="move-chip move-down" title="Baja 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>1</span>
+      <div class="rank-points">10<span>PTS</span></div>
+      <span class="move-chip move-down" title="Baja 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>2</span>
     </a>
 
     <a class="rank-row " href="jugador_bichu.html">
       <div class="rank-badge">14</div>
       <img class="avatar" src="img/avatars/bichu.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Bichu <span class="streak-chip streak-goal" title="3 partidos seguidos marcando">⚽ 3</span></div>
-        <div class="rank-sub">PJ 8 · PPM 0.88 · Goles 9 · GPM 1.12</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:29%"></div></div>
+        <div class="rank-name">Bichu <span class="streak-chip streak-goal" title="4 partidos seguidos marcando">⚽ 4</span></div>
+        <div class="rank-sub">PJ 9 · PPM 0.78 · Goles 10 · GPM 1.11</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:26%"></div></div>
       </div>
       <div class="rank-points">7<span>PTS</span></div>
-      <span class="move-chip move-down" title="Baja 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>1</span>
+      <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
     </a>
 
     <a class="rank-row " href="jugador_rafa.html">
       <div class="rank-badge">15</div>
       <img class="avatar" src="img/avatars/rafa.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Rafa <span class="streak-chip streak-fire" title="2 partidos sin perder">🔥 2</span> <span class="streak-chip streak-goal" title="2 partidos seguidos marcando">⚽ 2</span></div>
-        <div class="rank-sub">PJ 7 · PPM 1.00 · Goles 5 · GPM 0.71</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:33%"></div></div>
+        <div class="rank-name">Rafa <span class="streak-chip streak-goal" title="3 partidos seguidos marcando">⚽ 3</span></div>
+        <div class="rank-sub">PJ 8 · PPM 0.88 · Goles 6 · GPM 0.75</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:29%"></div></div>
       </div>
       <div class="rank-points">7<span>PTS</span></div>
-      <span class="move-chip move-up" title="Sube 3 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>3</span>
+      <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
     </a>
 
     <a class="rank-row " href="jugador_sergio.html">
@@ -480,7 +470,7 @@
         <div class="rank-bar"><div class="rank-bar-fill" style="width:47%"></div></div>
       </div>
       <div class="rank-points">7<span>PTS</span></div>
-      <span class="move-chip move-down" title="Baja 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>2</span>
+      <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
     </a>
 
     <a class="rank-row " href="jugador_angel.html">
@@ -492,7 +482,7 @@
         <div class="rank-bar"><div class="rank-bar-fill" style="width:39%"></div></div>
       </div>
       <div class="rank-points">7<span>PTS</span></div>
-      <span class="move-chip move-down" title="Baja 2 puestos"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>2</span>
+      <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
     </a>
 
     <a class="rank-row " href="jugador_antonior.html">
@@ -504,7 +494,7 @@
         <div class="rank-bar"><div class="rank-bar-fill" style="width:50%"></div></div>
       </div>
       <div class="rank-points">6<span>PTS</span></div>
-      <span class="move-chip move-down" title="Baja 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>1</span>
+      <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
     </a>
 
     <a class="rank-row " href="jugador_vega.html">
@@ -531,8 +521,20 @@
       <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
     </a>
 
-    <a class="rank-row " href="jugador_victor.html">
+    <a class="rank-row " href="jugador_pablo.html">
       <div class="rank-badge">21</div>
+      <img class="avatar" src="img/avatars/pablo.png" alt="">
+      <div class="rank-info">
+        <div class="rank-name">Pablo </div>
+        <div class="rank-sub">PJ 3 · PPM 1.00 · Goles 0 · GPM 0.00</div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:33%"></div></div>
+      </div>
+      <div class="rank-points">3<span>PTS</span></div>
+      <span class="move-chip move-up" title="Sube 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 1 L9 8 L1 8 Z" fill="currentColor"/></svg>1</span>
+    </a>
+
+    <a class="rank-row " href="jugador_victor.html">
+      <div class="rank-badge">22</div>
       <img class="avatar" src="img/avatars/victor.png" alt="">
       <div class="rank-info">
         <div class="rank-name">Victor </div>
@@ -540,19 +542,7 @@
         <div class="rank-bar"><div class="rank-bar-fill" style="width:100%"></div></div>
       </div>
       <div class="rank-points">3<span>PTS</span></div>
-      <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
-    </a>
-
-    <a class="rank-row " href="jugador_pablo.html">
-      <div class="rank-badge">22</div>
-      <img class="avatar" src="img/avatars/pablo.png" alt="">
-      <div class="rank-info">
-        <div class="rank-name">Pablo </div>
-        <div class="rank-sub">PJ 2 · PPM 0.00 · Goles 0 · GPM 0.00</div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:3%"></div></div>
-      </div>
-      <div class="rank-points">0<span>PTS</span></div>
-      <span class="move-chip move-flat" title="Se mantiene"><svg width="11" height="11" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="currentColor"/></svg></span>
+      <span class="move-chip move-down" title="Baja 1 puesto"><svg width="11" height="11" viewBox="0 0 10 10"><path d="M5 9 L1 2 L9 2 Z" fill="currentColor"/></svg>1</span>
     </a>
   </section>
   <section id="goleadores">
@@ -562,30 +552,30 @@
       <div class="rank-badge">1</div>
       <img class="avatar" src="img/avatars/juanjo.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Juanjo </div>
+        <div class="rank-name">Juanjo <span class="streak-chip streak-goal" title="2 partidos seguidos marcando">⚽ 2</span></div>
         <div class="rank-bar"><div class="rank-bar-fill" style="width:100%"></div></div>
       </div>
-      <div class="rank-points">15<span>GOLES</span></div>
+      <div class="rank-points">16<span>GOLES</span></div>
     </a>
 
     <a class="rank-row rank-2" href="jugador_andres.html">
       <div class="rank-badge">2</div>
       <img class="avatar" src="img/avatars/andres.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Andres <span class="streak-chip streak-goal" title="3 partidos seguidos marcando">⚽ 3</span></div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:67%"></div></div>
+        <div class="rank-name">Andres <span class="streak-chip streak-goal" title="4 partidos seguidos marcando">⚽ 4</span></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:81%"></div></div>
       </div>
-      <div class="rank-points">10<span>GOLES</span></div>
+      <div class="rank-points">13<span>GOLES</span></div>
     </a>
 
     <a class="rank-row rank-3" href="jugador_bichu.html">
       <div class="rank-badge">3</div>
       <img class="avatar" src="img/avatars/bichu.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Bichu <span class="streak-chip streak-goal" title="3 partidos seguidos marcando">⚽ 3</span></div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:60%"></div></div>
+        <div class="rank-name">Bichu <span class="streak-chip streak-goal" title="4 partidos seguidos marcando">⚽ 4</span></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:62%"></div></div>
       </div>
-      <div class="rank-points">9<span>GOLES</span></div>
+      <div class="rank-points">10<span>GOLES</span></div>
     </a>
 
     <a class="rank-row " href="jugador_joses.html">
@@ -593,7 +583,7 @@
       <img class="avatar" src="img/avatars/joses.png" alt="">
       <div class="rank-info">
         <div class="rank-name">JoseS </div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:60%"></div></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:56%"></div></div>
       </div>
       <div class="rank-points">9<span>GOLES</span></div>
     </a>
@@ -603,77 +593,77 @@
       <img class="avatar" src="img/avatars/dani.png" alt="">
       <div class="rank-info">
         <div class="rank-name">Dani <span class="streak-chip streak-fire" title="4 partidos sin perder">🔥 4</span></div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:40%"></div></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:38%"></div></div>
+      </div>
+      <div class="rank-points">6<span>GOLES</span></div>
+    </a>
+
+    <a class="rank-row " href="jugador_rafa.html">
+      <div class="rank-badge">6</div>
+      <img class="avatar" src="img/avatars/rafa.png" alt="">
+      <div class="rank-info">
+        <div class="rank-name">Rafa <span class="streak-chip streak-goal" title="3 partidos seguidos marcando">⚽ 3</span></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:38%"></div></div>
+      </div>
+      <div class="rank-points">6<span>GOLES</span></div>
+    </a>
+
+    <a class="rank-row " href="jugador_ruben.html">
+      <div class="rank-badge">7</div>
+      <img class="avatar" src="img/avatars/ruben.png" alt="">
+      <div class="rank-info">
+        <div class="rank-name">Ruben </div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:38%"></div></div>
       </div>
       <div class="rank-points">6<span>GOLES</span></div>
     </a>
 
     <a class="rank-row " href="jugador_vega.html">
-      <div class="rank-badge">6</div>
+      <div class="rank-badge">8</div>
       <img class="avatar" src="img/avatars/vega.png" alt="">
       <div class="rank-info">
         <div class="rank-name">Vega </div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:40%"></div></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:38%"></div></div>
       </div>
       <div class="rank-points">6<span>GOLES</span></div>
     </a>
 
     <a class="rank-row " href="jugador_marcos.html">
-      <div class="rank-badge">7</div>
+      <div class="rank-badge">9</div>
       <img class="avatar" src="img/avatars/marcos.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Marcos <span class="streak-chip streak-fire" title="4 partidos sin perder">🔥 4</span> <span class="streak-chip streak-goal" title="2 partidos seguidos marcando">⚽ 2</span></div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:33%"></div></div>
+        <div class="rank-name">Marcos </div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:31%"></div></div>
       </div>
       <div class="rank-points">5<span>GOLES</span></div>
     </a>
 
-    <a class="rank-row " href="jugador_rafa.html">
-      <div class="rank-badge">8</div>
-      <img class="avatar" src="img/avatars/rafa.png" alt="">
+    <a class="rank-row " href="jugador_rodrigo.html">
+      <div class="rank-badge">10</div>
+      <img class="avatar" src="img/avatars/rodrigo.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Rafa <span class="streak-chip streak-fire" title="2 partidos sin perder">🔥 2</span> <span class="streak-chip streak-goal" title="2 partidos seguidos marcando">⚽ 2</span></div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:33%"></div></div>
+        <div class="rank-name">Rodrigo <span class="streak-chip streak-fire" title="2 partidos sin perder">🔥 2</span></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:31%"></div></div>
       </div>
       <div class="rank-points">5<span>GOLES</span></div>
     </a>
 
     <a class="rank-row " href="jugador_antonioc.html">
-      <div class="rank-badge">9</div>
+      <div class="rank-badge">11</div>
       <img class="avatar" src="img/avatars/antonioc.png" alt="">
       <div class="rank-info">
         <div class="rank-name">AntonioC </div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:27%"></div></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:25%"></div></div>
       </div>
       <div class="rank-points">4<span>GOLES</span></div>
     </a>
 
     <a class="rank-row " href="jugador_franr.html">
-      <div class="rank-badge">10</div>
+      <div class="rank-badge">12</div>
       <img class="avatar" src="img/avatars/franr.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">FranR <span class="streak-chip streak-fire" title="4 partidos sin perder">🔥 4</span></div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:20%"></div></div>
-      </div>
-      <div class="rank-points">3<span>GOLES</span></div>
-    </a>
-
-    <a class="rank-row " href="jugador_rodrigo.html">
-      <div class="rank-badge">11</div>
-      <img class="avatar" src="img/avatars/rodrigo.png" alt="">
-      <div class="rank-info">
-        <div class="rank-name">Rodrigo </div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:20%"></div></div>
-      </div>
-      <div class="rank-points">3<span>GOLES</span></div>
-    </a>
-
-    <a class="rank-row " href="jugador_ruben.html">
-      <div class="rank-badge">12</div>
-      <img class="avatar" src="img/avatars/ruben.png" alt="">
-      <div class="rank-info">
-        <div class="rank-name">Ruben </div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:20%"></div></div>
+        <div class="rank-name">FranR <span class="streak-chip streak-fire" title="5 partidos sin perder">🔥 5</span></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:19%"></div></div>
       </div>
       <div class="rank-points">3<span>GOLES</span></div>
     </a>
@@ -683,7 +673,7 @@
       <img class="avatar" src="img/avatars/sergio.png" alt="">
       <div class="rank-info">
         <div class="rank-name">Sergio </div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:20%"></div></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:19%"></div></div>
       </div>
       <div class="rank-points">3<span>GOLES</span></div>
     </a>
@@ -693,7 +683,7 @@
       <img class="avatar" src="img/avatars/angel.png" alt="">
       <div class="rank-info">
         <div class="rank-name">Angel </div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:13%"></div></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:12%"></div></div>
       </div>
       <div class="rank-points">2<span>GOLES</span></div>
     </a>
@@ -703,7 +693,7 @@
       <img class="avatar" src="img/avatars/gago.png" alt="">
       <div class="rank-info">
         <div class="rank-name">Gago </div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:13%"></div></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:12%"></div></div>
       </div>
       <div class="rank-points">2<span>GOLES</span></div>
     </a>
@@ -712,10 +702,10 @@
       <div class="rank-badge">16</div>
       <img class="avatar" src="img/avatars/pibbe.png" alt="">
       <div class="rank-info">
-        <div class="rank-name">Pibbe <span class="streak-chip streak-fire" title="2 partidos sin perder">🔥 2</span></div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:7%"></div></div>
+        <div class="rank-name">Pibbe <span class="streak-chip streak-fire" title="3 partidos sin perder">🔥 3</span></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:12%"></div></div>
       </div>
-      <div class="rank-points">1<span>GOLES</span></div>
+      <div class="rank-points">2<span>GOLES</span></div>
     </a>
 
     <a class="rank-row " href="jugador_raul.html">
@@ -723,9 +713,9 @@
       <img class="avatar" src="img/avatars/raul.png" alt="">
       <div class="rank-info">
         <div class="rank-name">Raul </div>
-        <div class="rank-bar"><div class="rank-bar-fill" style="width:7%"></div></div>
+        <div class="rank-bar"><div class="rank-bar-fill" style="width:12%"></div></div>
       </div>
-      <div class="rank-points">1<span>GOLES</span></div>
+      <div class="rank-points">2<span>GOLES</span></div>
     </a>
 
     <a class="rank-row " href="jugador_alfonso.html">
@@ -787,7 +777,7 @@
         <div class="record-crown">👑</div>
         <div class="record-icon">🎽</div>
         <div class="record-title">Más partidos jugados</div>
-        <div class="record-stat">10<span class="unit">partidos</span></div>
+        <div class="record-stat">11<span class="unit">partidos</span></div>
         <div class="record-holder">Andres</div>
         
       </a>
@@ -795,7 +785,7 @@
         <div class="record-crown">👑</div>
         <div class="record-icon">🔗</div>
         <div class="record-title">Más partidos seguidos<br>sin faltar</div>
-        <div class="record-stat">10<span class="unit">seguidos</span></div>
+        <div class="record-stat">11<span class="unit">seguidos</span></div>
         <div class="record-holder">Andres</div>
         
       </a>
@@ -823,14 +813,14 @@
         <div class="record-holder">— Vacante —</div>
         <div class="vacant-pill">Empate</div>
       </div>
-      <a class="record-card held" href="jugador_joses.html">
-        <div class="record-crown">👑</div>
+      <div class="record-card vacant">
+        
         <div class="record-icon">🛡️</div>
         <div class="record-title">Racha invicta<br>más larga</div>
         <div class="record-stat">5<span class="unit">seguidos</span></div>
-        <div class="record-holder">JoseS</div>
-        
-      </a>
+        <div class="record-holder">— Vacante —</div>
+        <div class="vacant-pill">Empate</div>
+      </div>
       <a class="record-card held" href="jugador_andres.html">
         <div class="record-crown">👑</div>
         <div class="record-icon">🍺</div>
@@ -844,6 +834,93 @@
   <section id="partidos">
     <h2>📅 Partidos</h2>
     
+    <div class="match-card" id="match-20261125">
+      <h3>25/11/2026</h3>
+      <div class="lineup-score">
+        <span class="naranja-n">6</span><span class="dash">–</span><span class="amarillo-n">7</span>
+      </div>
+      <div class="lineup-cols">
+        <div>
+          <div class="lineup-col-head naranja">Naranja</div>
+          
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Defensas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/alfonso.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Alfonso</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/gago.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Gago</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/raul.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Raul</span>
+              <span class="lineup-goals">⚽×1</span>
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Centrocampistas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/bichu.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Bichu</span>
+              <span class="lineup-goals">⚽×1</span>
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/marcos.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Marcos</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/ruben.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Ruben</span>
+              <span class="lineup-goals">⚽×3</span>
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Delanteros</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/rafa.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Rafa</span>
+              <span class="lineup-goals">⚽×1</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="lineup-col-head amarillo">Amarillo</div>
+          
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Defensas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/franr.png" alt="" loading="lazy">
+              <span class="lineup-player-name">FranR</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/pablo.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Pablo</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/pibbe.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Pibbe</span>
+              <span class="lineup-goals">⚽×1</span>
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Centrocampistas</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/antonioc.png" alt="" loading="lazy">
+              <span class="lineup-player-name">AntonioC</span>
+              
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/rodrigo.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Rodrigo</span>
+              <span class="lineup-goals">⚽×2</span>
+            </div>
+          </div>
+          <div class="lineup-pos-group">
+            <div class="lineup-pos-label">Delanteros</div>
+            <div class="lineup-player"><img class="lineup-avatar" src="img/avatars/andres.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Andres</span>
+              <span class="lineup-goals">⚽×3</span>
+            </div><div class="lineup-player"><img class="lineup-avatar" src="img/avatars/juanjo.png" alt="" loading="lazy">
+              <span class="lineup-player-name">Juanjo</span>
+              <span class="lineup-goals">⚽×1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <details class="chronicle">
+        <summary>📖 Ver crónica</summary>
+        <p>Festival de goles entre Naranja y Amarillo: 6-7 en un partido de ida y vuelta sin descanso para las defensas. Ruben se echó el equipo a la espalda anotando 3 tantos. Se acaba la racha de Marcos, que llevaba 4 partidos sin perder. Este partido tenía morbo extra: Marcos y Andres ya se conocen de sobra, con Marcos por delante en el cara a cara. Además, Ruben se apunta hoy la insignia de Hat-trick. FranR se lo ha currado: insignia de 5 seguidos para su vitrina. JoseS pierde la exclusiva del récord de la racha invicta más larga: queda vacante tras el empate.</p>
+      </details>
+    </div>
+
     <div class="match-card" id="match-20261118">
       <h3>18/11/2026</h3>
       <div class="lineup-score">
